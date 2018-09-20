@@ -10,3 +10,11 @@ print(f"Cost of {auto_service}: ${service_prices[auto_service]}")
 #%s is outdated
 if auto_service not in service_prices:
     print('Error: Requested service is not recognized')
+
+#lowercase
+service_prices = {'Oil change' : 35,
+          'Tire rotation' : 19,
+          'Car wash' : 7}
+auto_service = input('Enter desired auto service:\n')
+print('You entered:', auto_service)
+print(f"Cost of {str.lower(auto_service)}: ${service_prices[auto_service]}")
