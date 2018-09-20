@@ -24,7 +24,7 @@ service_prices = {'Oil change' : 35,
           'Car wash' : 7}
 auto_service = input('Enter desired auto service:\n')
 print('You entered:', auto_service)
-if auto_service = service_prices:
+if auto_service == service_prices:
     print(f"Cost of {str.lower(auto_service)}: ${service_prices[auto_service]}")
 else:
     print('Error: Requested service is not recognized')
