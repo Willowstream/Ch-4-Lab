@@ -5,3 +5,4 @@ service_prices = {'Oil change' : 35,
           'Car wash' : 7}
 auto_service = input('Enter desired auto service:\n')
 print('You entered:', auto_service)
+print('Cost of %s: $%d' % auto_service, service_prices[auto_service])
