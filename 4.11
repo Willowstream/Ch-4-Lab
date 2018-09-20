@@ -3,3 +3,4 @@
 service_prices = {'Oil change' : 35,
           'Tire rotation' : 19,
           'Car wash' : 7}
+          
