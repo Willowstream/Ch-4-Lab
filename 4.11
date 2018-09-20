@@ -6,3 +6,5 @@ service_prices = {'Oil change' : 35,
 auto_service = input('Enter desired auto service:\n')
 print('You entered:', auto_service)
 print('Cost of %s: $%d' % auto_service, service_prices[auto_service])
+if auto_service not in service_prices:
+    print('Error: Requested service is not recognized')
