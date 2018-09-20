@@ -3,4 +3,5 @@
 service_prices = {'Oil change' : 35,
           'Tire rotation' : 19,
           'Car wash' : 7}
-          
+auto_service = input('Enter desired auto service:\n')
+print('You entered:', auto_service)
