@@ -15,3 +15,24 @@ print ('****')
 print ('***')
 print ('**')
 print ('*')
+
+#4/5 points
+arrow_base_height = int(input('Enter arrow base height:\n'))
+
+arrow_base_width = int(input('Enter arrow base width:\n'))
+
+arrow_head_width = int(input('Enter arrow head width:\n'))
+
+print('')
+
+while arrow_head_width <= arrow_base_width:
+   arrow_head_width = int(input('Enter arrow head width:\n'))
+
+for h in range(arrow_base_height):
+    for w in range(arrow_base_width):
+        print('*', end= '')
+    print()
+for bw in reversed(range(arrow_head_width)):
+    for hw in range(bw + 1):
+        print('*', end= '')
+    print()
