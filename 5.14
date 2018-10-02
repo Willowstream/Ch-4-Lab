@@ -1,7 +1,17 @@
+#1/3 points
 triangle_char = input('Enter a character:\n')
 triangle_height = int(input('Enter triangle height:\n'))
 print('')
 
-print ('* ')
-print ('* * ')
-print ('* * * ')
+print (f'{triangle_char} ')
+print (f'{triangle_char} {triangle_char} ')
+print (f'{triangle_char} {triangle_char} {triangle_char} ')
+
+#Updated 10/2, 3/3 points
+triangle_char = input('Enter a character:\n')
+triangle_height = int(input('Enter triangle height:\n'))
+
+for num in range(triangle_height + 1):
+    for i in range(num):
+        print(triangle_char, end=' ')
+    print()
