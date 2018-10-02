@@ -6,6 +6,7 @@ print('')
 print (f'{triangle_char} ')
 print (f'{triangle_char} {triangle_char} ')
 print (f'{triangle_char} {triangle_char} {triangle_char} ')
+# Remove the 3 print statements above before moving on to the next part.
 
 #Updated 10/2, 3/3 points
 triangle_char = input('Enter a character:\n')
