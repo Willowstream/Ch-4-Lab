@@ -97,6 +97,7 @@ num_rolls = int(input('Enter number of rolls:\n'))
 
 while num_rolls < 1:
     print('Enter number of rolls:\n')
+    break
 
 if num_rolls >= 1:
     for i in range(num_rolls):
