@@ -183,28 +183,27 @@ if num_rolls in range(1,7):
 else:
     print('Invalid number of rolls. Try again.')
 #Delete all previous data for previous versions------------------------------------------------------------------------------
+#Runs but infinite
 import random
 
 num_rolls = int(input('Enter number of rolls:\n'))
-totals_times = {}
+total_times = {}
 #Empty because keys and values are added later
 
-def totals_times(possible_value):
-    if possible_value > 0:
-        for n in range(possible_value):
-            print('*')
 
-if num_rolls >= 1:
-    for i in range(num_rolls):
+while num_rolls >= 1:
+    for n in range(num_rolls):
         die1 = random.randint(1,6)
         die2 = random.randint(1,6)
         roll_total = die1 + die2
-
-        #Count number of sixes and sevens
-        if roll_total == 6:
-            num_sixes = num_sixes + 1
-        if roll_total == 7:
-            num_sevens = num_sevens + 1
-        print('Roll %d is %d (%d + %d)' % (i, roll_total, die1, die2))
+        if str(roll_total) in total_times:
+            total_times[str(roll_total)] +=1
+        else:
+            total_times[str(roll_total)] = 1
+    for n in total_times:
+        print(f'{n}s')
+        if total_times[n] > 0:
+            for length in range(total_times[n]):
+                print('*')
 else:
     print('Invalid number of rolls. Try again.')
