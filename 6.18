@@ -2,3 +2,16 @@ inputStr = input('Enter a sentence or phrase:\n')
 print()
 print(f'You entered: {inputStr}')
 #Correct until here
+#Add the following
+def get_num_of_characters(inputStr):
+    length = len(inputStr)
+    return length
+length = get_num_of_characters(inputStr)
+print() #Important
+print('Number of characters:', length)
+#Part 4
+no_whitespace = ''
+for char in inputStr:
+    if char != ' ':
+        no_whitespace += char
+print('String with no whitespace:', no_whitespace)
