@@ -1,1 +1,4 @@
-
+inputStr = input('Enter a sentence or phrase:\n')
+print()
+print(f'You entered: {inputStr}')
+#Correct until here
