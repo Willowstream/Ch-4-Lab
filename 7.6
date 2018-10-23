@@ -1,9 +1,13 @@
 user_input=(input('Enter input string:\n'))
 while ',' not in user_input:
     print(user_input)
-    print('No comma in string.\n')
+    print('Error: No comma in string.\n')
     user_input=(input('Enter input string:\n'))
 else:
     print(user_input)
-
-### Still Adding
+    (a, b) = user_input.split(',')
+    print('First word:', a.strip())
+    print('Second word:', b.strip())
+   
+   
+   ### Needs Final Loop
