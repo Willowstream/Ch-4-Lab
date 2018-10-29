@@ -9,3 +9,18 @@ else:
    
    
    ### 5/7 Code
+#Took a while and I had to rework the user_input prompt but here's the finished product. 7/7
+def get_input():
+    global user_input
+    user_input = input('Enter input string:\n')
+get_input()
+while user_input != 'q':
+    if ',' not in user_input:
+        print('Error: No comma in string.')
+    else:
+        (a, b) = user_input.split(',')
+        print('First word:', a.strip())
+        print('Second word:', b.strip())
+    print()
+    get_input()
+    continue
