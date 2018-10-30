@@ -58,3 +58,11 @@ get_vowels(string_1)
 print('Number of vowels:', num_vowels)
 get_consonants(string_1)
 print('Number of consonants:', num_consonants)
+
+#Pig Latin
+
+user_input = str(input('Enter a sentence:')).split()
+for inputs in user_input:
+    print(inputs[1:] + inputs[0] + 'ay', end = ' ')
+print()
+
