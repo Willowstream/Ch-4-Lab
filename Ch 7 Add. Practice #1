@@ -1,1 +1,7 @@
 #Initials
+full_name = input('Enter your full name: ')
+tokens = full_name.split(' ')
+initial_1 = tokens[0][0]
+initial_2 = tokens[1][0]
+initial_3 = tokens[2][0]
+print('Initials: {0}. {1}. {2}'.format(initial_1, initial_2, initial_3))
