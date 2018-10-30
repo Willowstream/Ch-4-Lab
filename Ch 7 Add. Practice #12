@@ -1,1 +1,5 @@
 #Pig Latin
+user_input = str(input('Enter a sentence:')).split()
+for inputs in user_input:
+    print(inputs[1:] + inputs[0] + 'ay', end = ' ')
+print()
