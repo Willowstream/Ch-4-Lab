@@ -1,1 +1,5 @@
 #Alphabetic Telephone Number Translator
+phone = input('Enter a phone number like this, XXX-XXX-XXXX:')
+if len(phone) != 12:
+    print(phone)
+    print('Too many or not enough numbers.')
