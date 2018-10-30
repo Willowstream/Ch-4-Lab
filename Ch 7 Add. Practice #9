@@ -1,7 +1,61 @@
-#Pig Latin
+#Vowels and Consonants
+string_1 = input('Enter a string here: ')
+def get_vowels(string_1):
+    global num_vowels
+    num_vowels = 0
+    if 'a' or 'A' in string_1:
+        num_vowels += 1
+    if 'e' or 'E' in string_1:
+        num_vowels += 1
+    if 'i' or 'I' in string_1:
+        num_vowels += 1
+    if 'o' or 'O' in string_1:
+        num_vowels += 1
+    if 'u' or 'U' in string_1:
+        num_vowels += 1
+    if 'y' or 'Y' in string_1:
+        num_vowels += 1
+    return num_vowels
+get_vowels(string_1)
+print('Number of vowels:', num_vowels)
+# Part 2------------------------------------------------
+def get_vowels(string_1):
+    global num_vowels
+    num_vowels = 0
+    if 'a' or 'A' in string_1:
+        num_vowels += 1
+    if 'e' or 'E' in string_1:
+        num_vowels += 1
+    if 'i' or 'I' in string_1:
+        num_vowels += 1
+    if 'o' or 'O' in string_1:
+        num_vowels += 1
+    if 'u' or 'U' in string_1:
+        num_vowels += 1
+    if 'y' or 'Y' in string_1:
+        num_vowels += 1
+    return num_vowels
 
-user_input = str(input('Enter a sentence:')).split()
-for inputs in user_input:
-    print(inputs[1:] + inputs[0] + 'ay', end = ' ')
-print()
+def get_consonants(string_1):
+    global num_consonants
+    num_consonants = len(string_1)
+    if 'a' or 'A' in string_1:
+        num_consonants -= 1
+    if 'e' or 'E' in string_1:
+        num_consonants -= 1
+    if 'i' or 'I' in string_1:
+        num_consonants -= 1
+    if 'o' or 'O' in string_1:
+        num_consonants -= 1
+    if 'u' or 'U' in string_1:
+        num_consonants -= 1
+    if 'y' or 'Y' in string_1:
+        num_consonants -= 1
+    return num_consonants
+
+string_1 = input('Enter a string here: ')
+get_vowels(string_1)
+print('Number of vowels:', num_vowels)
+get_consonants(string_1)
+print('Number of consonants:', num_consonants)
 
