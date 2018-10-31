@@ -5,3 +5,23 @@ print('You entered: {0}\n'.format(column_1))
 column_2 = input('Enter the column 2 header:\n')
 print('You entered: {0}\n'. format(column_2))
 # 2/17
+title = input('Enter a title for the data:\n')
+print('You entered: {0}\n'.format(title))
+column_1 = input('Enter the column 1 header:\n')
+print('You entered: {0}\n'.format(column_1))
+column_2 = input('Enter the column 2 header:\n')
+print('You entered: {0}\n'. format(column_2))
+
+def get_data():
+    global data_point
+    data_point = input('Enter a data point (-1 to stop input):\n')
+get_data()
+while data_point != '-1':
+    split_data_point = data_point.split(',')
+    integer = split_data_point[1]
+    string = split_data_point[0]
+    print('Data string:', string)
+    print('Data integer:{0}'.format(integer))
+    break
+    #6/17
+    
