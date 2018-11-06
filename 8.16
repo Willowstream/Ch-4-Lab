@@ -44,3 +44,30 @@ print('Average weight: %.2f' % avg_weight)
 
 max_weight = max(weight_list)
 print('Max weight: %.2f' % max_weight)
+#7/9 code--------------------------------------------------------------------------------------------------------------------------
+weight_list = []
+weight_1 = float(input('Enter weight 1:\n'))
+weight_list.append(weight_1)
+weight_2 = float(input('Enter weight 2:\n'))
+weight_list.append(weight_2)
+weight_3 = float(input('Enter weight 3:\n'))
+weight_list.append(weight_3)
+weight_4 = float(input('Enter weight 4:\n'))
+weight_list.append(weight_4)
+
+print('Weights:', weight_list)
+print()
+
+avg_weight = (sum(weight_list)) / 4
+print('Average weight: %.2f' % avg_weight)
+
+max_weight = max(weight_list)
+print('Max weight: %.2f' % max_weight)
+print()
+
+list_index = int(input('Enter a list index (1 - 4):\n'))
+chosen_weight = weight_list[list_index-1]
+print('Weight in pounds: %.2f' % chosen_weight)
+
+kilo_weight = chosen_weight / 2.2
+print('Weight in kilograms: %.2f' % kilo_weight)
