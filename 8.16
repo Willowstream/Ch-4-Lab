@@ -71,3 +71,8 @@ print('Weight in pounds: %.2f' % chosen_weight)
 
 kilo_weight = chosen_weight / 2.2
 print('Weight in kilograms: %.2f' % kilo_weight)
+#Add this code to the end to get 9/9---------------------------------------------------------------------------------------------
+print()
+
+weight_list.sort()
+print('Sorted list:', weight_list)
