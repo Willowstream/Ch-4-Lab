@@ -1,4 +1,4 @@
-#No points switching to do additional practice
+#No points trying a easier way to do this
 jersey_rating = {}
 #Player 1
 jersey_1 = input("Enter player 1's jersey number:\n")
