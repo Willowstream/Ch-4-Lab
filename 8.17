@@ -1,1 +1,34 @@
+#No points switching to do additional practice
+jersey_rating = {}
+#Player 1
+jersey_1 = input("Enter player 1's jersey number:\n")
+rating_1 = input("Enter player 1's rating:\n")
+jersey_rating[jersey_1] = rating_1
+print()
+#Player 2
+jersey_2 = input("Enter player 2's jersey number:\n")
+rating_2 = input("Enter player 2's rating:\n")
+jersey_rating[jersey_2] = rating_2
+print()
+#Player 3
+jersey_3 = input("Enter player 3's jersey number:\n")
+rating_3 = input("Enter player 3's rating:\n")
+jersey_rating[jersey_3] = rating_3
+print()
+#Player 4
+jersey_4 = input("Enter player 4's jersey number:\n")
+rating_4 = input("Enter player 4's rating:\n")
+jersey_rating[jersey_4] = rating_4
+print()
+#Player 5
+jersey_5 = input("Enter player 5's jersey number:\n")
+rating_5 = input("Enter player 5's rating:\n")
+jersey_rating[jersey_5] = rating_5
+print()
+#Rooster now
+print('ROOSTER')
+
+print(jersey_rating)
+'Jersey number:', 
+
 
