@@ -1,1 +1,38 @@
+codes = {'A':'Alpha','a':'alpha',
+        'B':'', 'b':'',
+        'C':'', 'c':'',
+        'D':'', 'd':'',
+        'E':'', 'e':'',
+        'F':'', 'f':'',
+        'G':'', 'g':'',
+        'H':'', 'h':'',
+        'I':'', 'i':'',
+        'J':'', 'j':'',
+        'K':'', 'k':'',
+        'L':'', 'l':'',
+        'M':'', 'm':'',
+        'N':'', 'n':'',
+        'O':'', 'o':'',
+        'P':'', 'p':'',
+        'Q':'', 'q':'',
+        'R':'', 'r':'',
+        'S':'', 's':'',
+        'T':'', 't':'',
+        'U':'', 'u':'',
+        'V':'', 'v':'',
+        'W':'', 'w':'',
+        'X':'', 'x':'',
+        'Y':'', 'y':'',
+        'Z':'', 'z':'',
+        ' ':'_',',':',',
+        }
+def get_reg_sentence():
+    reg_sentence = input('Enter a English sentence:\n')
+    if key in reg_sentence
+       new_sentencec = reg_sentence.replace(key, value)
+
+
+get_reg_sentence()
+    
+        
 
