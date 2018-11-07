@@ -1,1 +1,51 @@
+friends_list = []
 
+def get_friends():
+    name = input('Enter the name of a friend:\n')
+    if name != 'q':
+        friends_list.append(name)
+    while name != 'q':
+        name = input('Enter the name of a friend:\n')
+        if name != 'q':
+            friends_list.append(name)
+    print('-Friends list-', friends_list)
+
+def menu():
+    print()
+    print('Contact list options:')
+    print('a - Add person')
+    print('d - Delete person')
+    print('p - Print the list')
+    print('q - Quit')
+
+    user_option = input("Please choose an option:\n")
+
+    return user_option
+
+def add_someone():
+    new_friend = input('Enter the name of your new friend!:\n')
+    friends_list.append(new_friend)
+    print('Yay! A new friend')
+
+def delete_someone():
+    deleted_friend = input('Enter a friend to delete:\n')
+    friends_list.remove(deleted_friend)
+    print('They are no longer your friend, yay!')
+
+def print_list():
+    for listing in friends_list:
+        print(listing)
+    print()
+
+get_friends()
+user_option = menu()
+
+while user_option != 'q': # To quit
+    if user_option == 'a': #Add someone to the list
+        add_someone()
+    elif user_option == 'd': #Delete someone from list
+        delete_someone()
+    elif user_option == 'p': #Print the list
+        print_list()
+
+    user_option = menu()
