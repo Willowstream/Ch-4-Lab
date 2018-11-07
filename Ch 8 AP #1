@@ -1,1 +1,30 @@
+rainfall = []
+
+def get_input():
+    for month in range(12):
+        rainfall_month = int(input(f'Enter rainfall for month {month + 1}:\n'))
+        rainfall.append(rainfall_month)
+
+def get_rainfall_year():
+     global yearly_rainfall
+     yearly_rainfall = sum(rainfall)
+     print('Yearly rainfall:', yearly_rainfall)
+
+def get_monthly_average():
+    monthly_average = yearly_rainfall / 12
+    print('Monthly average:', monthly_average)
+
+def get_high():
+    LG_sorted = sorted(rainfall)
+    print('Highest amount of rainfall:', LG_sorted[-1])
+
+def get_low():
+    GL_sorted = sorted(rainfall)
+    print('Lowest amount of rainfall:', GL_sorted[0])
+
+get_input()
+get_rainfall_year()
+get_monthly_average()
+get_high()
+get_low()
 
