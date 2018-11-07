@@ -30,5 +30,21 @@ print('ROOSTER')
 
 print(jersey_rating)
 'Jersey number:', 
-
+# 3/11 Used a while loop (duh) for the input and a for loop for the roster----------------------------------------------------------
+num_player = 1
+#Don't start at 0
+jersey_rating = {}
+#Get the input for the dictionary
+while num_player < 6:
+    jersey = int(input("Enter player %d's jersey number:\n" % num_player)) # As player increases the prompt will too
+    rating = int(input("Enter player %d's rating:\n" % num_player)) #Same idea as line above
+    print()
+    num_player += 1 #Move to next player
+    jersey_rating[jersey] = rating #Make jersey a key and rating the value
+    jersey_list = sorted(list(jersey_rating.keys())) #Change dict keys to list and then sort
+#Roster is next
+print('ROSTER')
+#Use for loop because they're already sorted
+for num in jersey_list:
+    print('Jersey number: %d, Rating: %d' % (num, jersey_rating[num])) #Num is an element and then a value is accessed using that
 
