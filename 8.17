@@ -47,4 +47,49 @@ print('ROSTER')
 #Use for loop because they're already sorted
 for num in jersey_list:
     print('Jersey number: %d, Rating: %d' % (num, jersey_rating[num])) #Num is an element and then a value is accessed using that
-
+#Issue with whitespace in zybooks
+def print_menu(): #Menu function
+    print("MENU")
+    print("a - Add player")
+    print("d - Remove player")
+    print("u - Update player rating")
+    print("r - Output players above a rating")
+    print("o - Output roster")
+    print("q - Quit")
+num_player = 1 #Not 0
+jersey_rating = {}
+jersey_rating_2 = {}
+while num_player < 6: #Dict input
+    jersey = int(input("Enter player %d's jersey number:\n" % num_player)) #Player up = prompt change
+    rating = int(input("Enter player %d's rating:\n" % num_player)) #Same idea as line above
+    print()
+    num_player += 1 #Move to next player
+    jersey_rating[jersey] = rating #Make jersey a key and rating the value
+    jersey_list = sorted(list(jersey_rating.keys())) #Change dict keys to list and then sort
+print('ROSTER')
+for num in jersey_list: #Use for loop because they're already sorted
+    print('Jersey number: %d, Rating: %d' % (num, jersey_rating[num]))#Num=element;value is accessed by key
+while True: #Now to for the menu, add a function to the beginning of code
+    print()
+    print_menu()
+    print()
+    user_option = input('Choose an option:\n')
+    if user_option == 'q':
+        exit()
+    elif user_option == 'o':
+        print()
+        print('ROSTER')
+        for num in jersey_list:
+            print('Jersey number: %d, Rating: %d' % (num, jersey_rating[num]))
+    elif user_option == 'a':
+        jersey_2 = int(input("Enter a new player's jersey number:\n"))
+        rating_2 = int(input("Enter the player's rating:\n"))
+        jersey_rating_2[jersey_2] = rating_2
+        jersey_rating.update(jersey_rating_2)#Update to old dict
+    elif user_option == 'r':
+        above_rating  = int(input('Enter a rating:\n'))
+        print()
+        print('ABOVE %d' % above_rating)
+        for jersey, rate in jersey_rating.items(): #Both keys and values
+            if rate > above_rating:
+                continue
