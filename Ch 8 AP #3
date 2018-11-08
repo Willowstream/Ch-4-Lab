@@ -1,38 +1,87 @@
-codes = {'A':'Alpha','a':'alpha',
-        'B':'', 'b':'',
-        'C':'', 'c':'',
-        'D':'', 'd':'',
-        'E':'', 'e':'',
-        'F':'', 'f':'',
-        'G':'', 'g':'',
-        'H':'', 'h':'',
-        'I':'', 'i':'',
-        'J':'', 'j':'',
-        'K':'', 'k':'',
-        'L':'', 'l':'',
-        'M':'', 'm':'',
-        'N':'', 'n':'',
-        'O':'', 'o':'',
-        'P':'', 'p':'',
-        'Q':'', 'q':'',
-        'R':'', 'r':'',
-        'S':'', 's':'',
-        'T':'', 't':'',
-        'U':'', 'u':'',
-        'V':'', 'v':'',
-        'W':'', 'w':'',
-        'X':'', 'x':'',
-        'Y':'', 'y':'',
-        'Z':'', 'z':'',
-        ' ':'_',',':',',
+codes = {'A':'Alpha','a':'alpha', # create a cypher using a dictionary
+        'B':'Bravo', 'b':'bravo',
+        'C':'Charlie', 'c':'charlie',
+        'D':'Delta', 'd':'delta',
+        'E':'Echo', 'e':'echo',
+        'F':'Foxtrot', 'f':'foxtrot',
+        'G':'Golf', 'g':'golf',
+        'H':'Hotel', 'h':'hotel',
+        'I':'India', 'i':'india',
+        'J':'Juliet', 'j':'juliet',
+        'K':'Kilo', 'k':'kilo',
+        'L':'Lima', 'l':'lima',
+        'M':'Mike', 'm':'mike',
+        'N':'November', 'n':'november',
+        'O':'Oscar', 'o':'oscar',
+        'P':'Papa', 'p':'papa',
+        'Q':'Quebec', 'q':'quebec',
+        'R':'Romeo', 'r':'romeo',
+        'S':'Sierra', 's':'sierra',
+        'T':'Tango', 't':'tango',
+        'U':'Uniform', 'u':'uniform',
+        'V':'Victor', 'v':'victor',
+        'W':'Whiskey', 'w':'wiskey',
+        'X':'X-ray', 'x':'x-ray',
+        'Y':'Yankee', 'y':'yankee',
+        'Z':'Zulu', 'z':'zulu',
+        ' ':'_',',':'/',
         }
-def get_reg_sentence():
-    reg_sentence = input('Enter a English sentence:\n')
-    if key in reg_sentence
-       new_sentencec = reg_sentence.replace(key, value)
 
+decrypt = {
+    'Alpha': 'A', 'alpha': 'a',
+    'Bravo': 'B', 'bravo': 'b',
+    'Charlie': 'C', 'charlie': 'c',
+    'Delta': 'D', 'delta': 'd',
+    'Echo': 'E', 'echo': 'e',
+    'Foxtrot': 'F', 'foxtrot': 'f',
+    'Golf': 'G', 'golf': 'g',
+    'Hotel': 'H', 'hotel': 'h',
+    'India': 'I', 'india': 'i',
+    'Juliet': 'J', 'juliet': 'j',
+    'Kilo': 'K', 'kilo': 'k',
+    'Lima': 'L', 'lima': 'l',
+    'Mike': 'M', 'mike': 'm',
+    'November': 'N', 'november': 'n',
+    'Oscar': 'O', 'oscar': 'o',
+    'Papa': 'P', 'papa': 'p',
+    'Quebec': 'Q', 'quebec': 'q',
+    'Romeo': 'R', 'romeo': 'r',
+    'Sierra': 'S', 'sierra': 's',
+    'Tango': 'T', 'tango': 't',
+    'Uniform': 'U', 'uniform': 'u',
+    'Victor': 'V', 'victor': 'v',
+    'Whiskey': 'W', 'whiskey': 'w',
+    'X-ray': 'X', 'x-ray': 'x',
+    'Yankee': 'Y', 'yankee': 'y',
+    'Zulu': 'Z', 'zulu': 'z',
+    '_': ' ', '/': ','
+}
+
+def get_reg_sentence(): #Get a sentence to encrypt from user
+    reg_sentence = input('Enter a English sentence:\n')
+    new_sentence = ''
+    for index, character in enumerate(reg_sentence):
+        if index != (len(reg_sentence) - 1): # encrypt the sentence
+            new_sentence += codes[character] + ' '
+        else:
+            new_sentence += codes[character]
+            '''
+            only put a space at the end of
+            each word if the index is not at the last character in the sentence
+            '''
+
+    print('Ecrypted sentence:', new_sentence) # print the encrypted sentence
+
+def get_encrypt_sentence(): #Get an encrypted sentence to decrypt
+    encrypt_sentence = input('Enter an encrypted sentence:\n')
+    new_sentence_2 = ''
+    encrypted_sentence = encrypt_sentence.split()
+    for token in encrypted_sentence:
+        if token in decrypt:
+            new_sentence_2 += decrypt[token]
+
+    print('Dencrypted sentence:', new_sentence_2)
 
 get_reg_sentence()
-    
-        
-
+print()
+get_encrypt_sentence()
