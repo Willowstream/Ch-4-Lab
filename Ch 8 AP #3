@@ -85,3 +85,4 @@ def get_encrypt_sentence(): #Get an encrypted sentence to decrypt
 get_reg_sentence()
 print()
 get_encrypt_sentence()
+#Done
