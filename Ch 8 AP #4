@@ -1,1 +1,72 @@
+contacts = {}
 
+def get_contacts():
+    contact_name = input('Enter the name of the contact:\n')
+    contact_num = input('Enter the phone number of the contact:\n')
+    contact_email = input("Enter the contact's email\n")
+
+    contacts[contact_name] = {}
+    contacts[contact_name]['number'] = contact_num
+    contacts[contact_name]['email'] = contact_email
+
+    print()
+
+def print_menu():
+    print()
+    print('Menu:')
+    print('Add contact - a')
+    print('Start over - o')
+    print('Delete contact - d')
+    print('Print contacts - p')
+    print('Quit - q')
+    print()
+
+    user_option = input("Please enter an option:\n")
+
+    return user_option
+
+def add_contact():
+    name = input("Please enter the name of the contact:\n")
+    number = input("Please enter the phone number of the contact:\n")
+    email = input("Please enter the email of the contact:\n")
+
+    contacts[name] = {}
+    contacts[name]['number'] = number
+    contacts[name]['email'] = email
+
+def start_over():
+    contacts.clear()
+
+def print_contacts():
+    print('Contacts:')
+    for name in contacts:
+        print(f"-{name}-")
+        print(f"Phone number: {contacts[name]['number']}")
+        print(f"Email: {contacts[name]['email']}")
+        print()
+
+def delete_contact():
+    print('Please enter the name of the contact you would like to delete')
+    name = input(": ")
+    contacts.pop(name)
+
+get_contacts()
+print_contacts()
+
+option = print_menu()
+
+while option != 'q':
+
+    if option == 'a':
+        add_contact()
+
+    elif option == 'o':
+        start_over()
+
+    elif option == 'd':
+        delete_contact()
+
+    elif option == 'p':
+        print_contacts()
+
+    option = print_menu()
